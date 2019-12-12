@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{name}}'s Watchlist</title>
+</head>
+<body>
+    <h2>{{name}}'s Watchlist</h2>
+    {#使用length 过滤获取movies变量的长度#}
+    <p>{{movies|length}} Title</p>
+    <ul>
+        {% for movie in movies %} {#遍历movies变量#}
+        <li>
+            {{movie.title}} - {{movie.year}}
+        </li>
+        {% endfor %}  {# 使用endfor结束for循环 #}
+
+    </ul>
+    <footer>
+        <small>&copy; 2019 By LaiGZ</small> 
+    </footer>
+</body>
+
+
+</html>
